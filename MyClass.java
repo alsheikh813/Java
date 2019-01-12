@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class MyClass {
+    Scanner input = new Scanner(System.in);
     public void printMsg(String msg) {
         System.out.println(msg);
     }
 
     public void guessMyNumber() {
-        Scanner input = new Scanner(System.in);
         int rand =(int) Math.floor(Math.random() * 10);
 
         for (int i =0; i < 3 ; i++){
@@ -20,6 +20,17 @@ public class MyClass {
             }
         }
         System.out.println("Sorry !! Game Over the number is :" + rand);
+    }
+    public void acceptAndReverse(){
+         int[] array = new int[5];
+        System.out.println("Please Enter 5 numbers :");
+        for (int i = 0; i < 5; i++) {
+             array[i] = input.nextInt();
+        }
+        for (int i = 4; i >= 0 ; i--) {
+            System.out.println(array[i]);
+        }
 
     }
+
 }
